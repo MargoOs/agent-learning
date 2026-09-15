@@ -100,7 +100,7 @@ or install it with the automation script:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/microsoft/agent-learning/main/scripts/install-linux.sh -o /tmp/install-linux.sh
-bash /tmp/install-linux.sh --version 0.8.2 --install-dir /usr/local/bin
+bash /tmp/install-linux.sh --version 0.8.3 --install-dir /usr/local/bin
 ```
 
 The Linux installation guide covers Debian/Ubuntu, RHEL-compatible, and
