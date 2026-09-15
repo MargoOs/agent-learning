@@ -115,6 +115,37 @@ Released versions are published to PyPI:
 pip install agent-learning
 ```
 
+### Development with uv
+
+**PyPI (any OS):** Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
+with `pip`:
+
+```shell
+pip install uv
+```
+
+Create a virtual environment and install the project runtime and development
+dependencies declared in `pyproject.toml`:
+
+```shell
+uv sync --extra dev
+```
+
+Commit `uv.lock` to keep dependency versions reproducible. After changing
+dependencies, update and verify the lock file:
+
+```shell
+uv lock
+uv lock --check
+```
+
+Run validation inside the managed environment with `uv run`:
+
+```shell
+uv run pytest
+uv run ruff check .
+```
+
 ## Quickstart: improve one recurring decision
 
 Use one durable store across CLI processes:
