@@ -242,6 +242,8 @@ agent-learn task-policy --agent-id <agent_id> --task-id <task_id>
 
 ## Documentation
 
+- [Audit and replay](docs/audit-replay.md): reconstruct a recorded native
+   update, inspect episode contributions, and run the offline operator demo.
 - [Agentic decision making](docs/decision-making.md): concepts, evidence,
    workflow, math, and deployment.
 - [Complexity-proportional autonomy](docs/autonomy-complexity.md): declared
