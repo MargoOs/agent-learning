@@ -173,8 +173,7 @@ episodes = spark.createDataFrame(
 )
 scored = score_episode_dataframe(episodes)
 ```
-•	See the [Microsoft Fabric notebook](examples/fabric/pyspark_episode_scoring.ipynb)
-•	for metric analysis and optional Lakehouse persistence.
+•	See the [Microsoft Fabric notebook](examples/fabric/pyspark_episode_scoring.ipynb) for metric analysis and optional Lakehouse persistence.
 
 
 
