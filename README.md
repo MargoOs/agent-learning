@@ -100,7 +100,7 @@ or install it with the automation script:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/microsoft/agent-learning/main/scripts/install-linux.sh -o /tmp/install-linux.sh
-bash /tmp/install-linux.sh --version 0.8.2 --install-dir /usr/local/bin
+bash /tmp/install-linux.sh --version 0.8.3 --install-dir /usr/local/bin
 ```
 
 The Linux installation guide covers Debian/Ubuntu, RHEL-compatible, and
@@ -113,6 +113,37 @@ Released versions are published to PyPI:
 
 ```shell
 pip install agent-learning
+```
+
+### Development with uv
+
+**PyPI (any OS):** Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
+with `pip`:
+
+```shell
+pip install uv
+```
+
+Create a virtual environment and install the project runtime and development
+dependencies declared in `pyproject.toml`:
+
+```shell
+uv sync --extra dev
+```
+
+Commit `uv.lock` to keep dependency versions reproducible. After changing
+dependencies, update and verify the lock file:
+
+```shell
+uv lock
+uv lock --check
+```
+
+Run validation inside the managed environment with `uv run`:
+
+```shell
+uv run pytest
+uv run ruff check .
 ```
 
 ## Quickstart: improve one recurring decision
