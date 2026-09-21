@@ -57,6 +57,7 @@ Quick start::
 """
 
 from ._version import __version__
+from .audit import AuditReport, AuditStatus, audit_run
 from .autonomy import (
     AutonomyAssessment,
     ComplexityAssessment,
@@ -123,6 +124,7 @@ from .types import (
     Action,
     AgentSummary,
     AgentTaskSummary,
+    ConsumedInput,
     Episode,
     MetricName,
     MetricResult,
@@ -139,6 +141,8 @@ __all__ = [
     "AdherenceScorer",
     "AgentSummary",
     "AgentTaskSummary",
+    "AuditReport",
+    "AuditStatus",
     "AutonomyAssessment",
     "AutonomyConfig",
     "AutonomyTier",
@@ -149,6 +153,7 @@ __all__ = [
     "CompletionScorer",
     "ComplexityAssessment",
     "ComplexityProfile",
+    "ConsumedInput",
     "ContextualSoftmaxPolicy",
     "CosmosConfig",
     "CosmosStore",
@@ -200,6 +205,7 @@ __all__ = [
     "__version__",
     "assess_autonomy",
     "assess_complexity",
+    "audit_run",
     "default_metrics",
     "evaluate_all",
     "get_capture",
